@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "com.dimdev.madscience.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "madscience.refmap.json",
+  "mixins": [],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}
