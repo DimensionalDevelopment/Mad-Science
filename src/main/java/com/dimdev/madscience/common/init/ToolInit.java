@@ -62,6 +62,6 @@ public enum ToolInit implements Tier {
     }
 
     public static void init() {
-        TierSortingRegistry.registerTier(AQUAMARINE, MadScience.MODID, Lists.newArrayList(new ResourceLocation("stone")), Lists.newArrayList(new ResourceLocation("iron")));
+        TierSortingRegistry.registerTier(AQUAMARINE, MadScience.id("aquamarine"), Lists.newArrayList(new ResourceLocation("stone")), Lists.newArrayList(new ResourceLocation("iron")));
     }
 }

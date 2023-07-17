@@ -2,6 +2,7 @@ package com.dimdev.madscience;
 
 import com.dimdev.madscience.common.init.*;
 import com.mojang.logging.LogUtils;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -12,6 +13,7 @@ import software.bernie.example.GeckoLibMod;
 import software.bernie.geckolib3.GeckoLib;
 
 @Mod(MadScience.MODID)
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class MadScience {
     public static final String MODID = "madscience";
     private static final Logger LOGGER = LogUtils.getLogger();
@@ -20,6 +22,10 @@ public class MadScience {
         bus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         onInitialize(bus);
+    }
+
+    public static ResourceLocation id(String id) {
+        return new ResourceLocation(MODID, id);
     }
 
     public void onInitialize(IEventBus bus) {
