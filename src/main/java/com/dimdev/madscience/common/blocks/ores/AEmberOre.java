@@ -2,9 +2,9 @@ package com.dimdev.madscience.common.blocks.ores;
 
 import net.minecraft.world.level.block.Block;
 
-public class ÆmberOre extends Block
+public class AEmberOre extends Block
 {
-    public ÆmberOre(Properties pProperties) {
+    public AEmberOre(Properties pProperties) {
         super(pProperties);
     }
 }

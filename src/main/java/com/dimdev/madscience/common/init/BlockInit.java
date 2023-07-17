@@ -1,7 +1,7 @@
 package com.dimdev.madscience.common.init;
 
 import com.dimdev.madscience.MadScience;
-import com.dimdev.madscience.common.blocks.ores.ÆmberOre;
+import com.dimdev.madscience.common.blocks.ores.AEmberOre;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -20,7 +20,7 @@ public class BlockInit {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MadScience.MODID);
 
-    public static final RegistryObject<ÆmberOre> ÆMBER_ORE = registerBlockToBase("Æmberore", () -> new ÆmberOre(BlockBehaviour.Properties.of(Material.STONE)));
+    public static final RegistryObject<AEmberOre> ÆMBER_ORE = registerBlockToBase("aemberore", () -> new AEmberOre(BlockBehaviour.Properties.of(Material.STONE)));
 
     private static <B extends Block> RegistryObject<B> registerBlockToBase(String name, Supplier<B> block) {
         return registerBlock(name, block, b -> () -> new BlockItem(b.get(), new Item.Properties().tab(ItemGroupInit.BASE)));
