@@ -19,8 +19,8 @@ import java.util.function.Supplier;
 public class BlockInit {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MadScience.MODID);
-
     public static final RegistryObject<AEmberOre> AEMBER_ORE = registerBlockToBase("aemberore", () -> new AEmberOre(BlockBehaviour.Properties.of(Material.STONE)));
+
 
     private static <B extends Block> RegistryObject<B> registerBlockToBase(String name, Supplier<B> block) {
         return registerBlock(name, block, b -> () -> new BlockItem(b.get(), new Item.Properties().tab(ItemGroupInit.BASE)));
@@ -29,6 +29,7 @@ public class BlockInit {
     public static <B extends Block> RegistryObject<B> registerOnlyBlock(String name, Supplier<B> block) {
         return BLOCKS.register(name, block);
     }
+
     public static <L extends LiquidBlock> RegistryObject<L> registerFluidBlock(String name, Supplier<L> block) {
         var reg = BLOCKS.register(name, block);
         return reg;
