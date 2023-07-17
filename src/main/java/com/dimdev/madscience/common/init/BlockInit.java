@@ -20,7 +20,7 @@ public class BlockInit {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MadScience.MODID);
 
-    public static final RegistryObject<AEmberOre> ÆMBER_ORE = registerBlockToBase("aemberore", () -> new AEmberOre(BlockBehaviour.Properties.of(Material.STONE)));
+    public static final RegistryObject<AEmberOre> AEMBER_ORE = registerBlockToBase("aemberore", () -> new AEmberOre(BlockBehaviour.Properties.of(Material.STONE)));
 
     private static <B extends Block> RegistryObject<B> registerBlockToBase(String name, Supplier<B> block) {
         return registerBlock(name, block, b -> () -> new BlockItem(b.get(), new Item.Properties().tab(ItemGroupInit.BASE)));
