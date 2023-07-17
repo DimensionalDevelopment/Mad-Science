@@ -6,6 +6,6 @@ import net.minecraft.world.level.block.SoundType;
 public class AEmberOre extends Block
 {
     public AEmberOre(Properties pProperties) {
-        super(pProperties.strength(12f,12f).sound(SoundType.STONE));
+        super(pProperties.strength(6f,8f).sound(SoundType.STONE).requiresCorrectToolForDrops());
     }
 }
