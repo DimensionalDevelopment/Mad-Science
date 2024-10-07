@@ -12,7 +12,7 @@ import java.util.function.Supplier;
 
 public class ItemInit {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MadScience.MODID);
-    private static final Item.Properties ITEM_SETTINGS = new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON).stacksTo(1).tab(ItemGroupInit.BASE);
+    private static final Item.Properties ITEM_SETTINGS = new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON).stacksTo(1);
 
     public static <T extends Item> RegistryObject<T> register(String name, Supplier<T> item) {
         return ITEMS.register(name, item);

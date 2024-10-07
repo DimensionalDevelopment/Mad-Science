@@ -9,8 +9,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
-import software.bernie.example.GeckoLibMod;
-import software.bernie.geckolib3.GeckoLib;
 
 @Mod(MadScience.MODID)
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -29,14 +27,12 @@ public class MadScience {
     }
 
     public void onInitialize(IEventBus bus) {
-        GeckoLib.initialize();
-        GeckoLibMod.DISABLE_IN_DEV = true;
         BlockInit.init(bus);
         ItemInit.init(bus);
         BlockEntityInit.init(bus);
         FluidTypesInit.init(bus);
         FluidInit.init(bus);
-        ItemGroupInit.init();
+        ItemGroupInit.init(bus);
         EntityInit.init(bus);
         SoundInit.init(bus);
         EffectInit.init(bus);

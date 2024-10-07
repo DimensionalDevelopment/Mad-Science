@@ -7,7 +7,6 @@ import org.jetbrains.annotations.Nullable;
 
 import com.mojang.blaze3d.shaders.FogShape;
 import com.mojang.blaze3d.systems.RenderSystem;
-import com.mojang.math.Vector3f;
 
 import net.minecraft.client.Camera;
 import net.minecraft.client.multiplayer.ClientLevel;
@@ -15,6 +14,7 @@ import net.minecraft.client.renderer.FogRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.extensions.common.IClientFluidTypeExtensions;
 import net.minecraftforge.fluids.FluidType;
+import org.joml.Vector3f;
 
 /**
  * Basic implementation of {@link FluidType} that supports specifying still and flowing textures in the constructor.
@@ -32,7 +32,7 @@ public class BaseFluidType extends FluidType {
     private final Vector3f fogColor;
 
     public BaseFluidType(final ResourceLocation stillTexture, final ResourceLocation flowingTexture,
-                                final ResourceLocation overlayTexture, final int tintColor, final Vector3f fogColor, final Properties properties) {
+                         final ResourceLocation overlayTexture, final int tintColor, final Vector3f fogColor, final Properties properties) {
         super(properties);
         this.stillTexture = stillTexture;
         this.flowingTexture = flowingTexture;
